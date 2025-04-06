@@ -3,33 +3,304 @@
   <head>
     <meta charset="UTF-8" />
     <title>صفحه رزومه</title>
+    <style>
+      body {
+        color: #2c3e50;
+        background-color: #a9c4e0;
+        direction: rtl;
+        padding: 30px;
+      }
+      /*make it simple and with no bullets*/
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      /*make it horizontally */
+      nav ul {
+        display: flex;
+        justify-content: right;
+      }
+      nav ul li {
+        margin: 8px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        text-decoration: none;
+        color: #4f6e90;
+        font-weight: bold;
+      }
+      #edu-parts {
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+      #edu-parts div {
+        margin-left: 50px;
+      }
+      .education h1 {
+        margin-bottom: 0px;
+      }
+      .job-experience h1 {
+        margin-bottom: 0px;
+      }
+      .job-parts {
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+      .job-parts div {
+        margin-left: 70px;
+      }
+      main {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+      }
+      main .right-side {
+        width: 70%;
+      }
+      main .left-side {
+        width: 30%;
+      }
+      main table {
+        width: 100%;
+      }
+      main table th {
+        text-align: right;
+        vertical-align: middle;
+      }
+      .projects div a {
+        text-decoration: none;
+        color: #2c3e50;
+      }
+      .projects div a:hover {
+        text-decoration: none;
+        color: #4f6e90;
+      }
+      .right-side .face-id img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      .right-side .face-id {
+        display: flex;
+      }
+      .face-id div{
+        margin-right: 40px;
+        align-content: center;
+      }
+    </style>
   </head>
-  <body style="background-color: #a9c4e0; direction: rtl; padding: 30px;">
-    <ul>
-      <li>
-        <a
-          href="index.html"
-          target="_blank"
-          style="color: #1a1a1a; text-decoration: none"
-          >صفحه اصلی</a
-        >
-      </li>
-      <li>
-        <a
-          href="about.html"
-          target="_blank"
-          style="color: #1a1a1a; text-decoration: none"
-          >درباره من</a
-        >
-      </li>
-      <li>
-        <a
-          href="contact.html"
-          target="_blank"
-          style="color: #1a1a1a; text-decoration: none"
-          >ارتباط با من</a
-        >
-      </li>
-    </ul>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" target="_blank">صفحه اصلی</a>
+          </li>
+          <li>
+            <a href="about.html" target="_blank">درباره من</a>
+          </li>
+          <li>
+            <a href="contact.html" target="_blank">ارتباط با من</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="right-side">
+        <section class="face-id">
+          <img src="images/resumePic.jpg" alt="تصویر من" />
+          <div>
+            <h3>محدثه آخوندی</h3>
+            <p>برنامه نویس حوزه نرم افزار</p>
+            <p>متولد 1381/11/17</p>
+          </div>
+        </section>
+        <section class="summary">
+          <h1>خلاصه رزومه</h1>
+          <div>
+            <p>دانشجو مهندسی کامپیوتر دانشگاه اصفهان.</p>
+            <p>یک برنامه نویس #ASP.NET/C در حوزه توسعه نرم افزار هستم.</p>
+            <p>
+              علاقه مند به یادگیری و همکاری در حوزه‌های مختلف و چالش برانگیز
+              مهندسی نرم افزار.
+            </p>
+          </div>
+        </section>
+        <section class="education">
+          <h1>سوابق تحصیلی</h1>
+          <div id="edu-parts">
+            <div>
+              <h4>کارشناسی مهندسی کامپیوتر</h4>
+              <p><strong>گرایش:</strong> <span>نرم‌افزار / شبکه</span></p>
+              <p><strong>دانشگاه:</strong> روزانه دانشگاه اصفهان</p>
+              <p><strong>شهر:</strong> <span>اصفهان</span></p>
+              <p><strong>سال‌ها:</strong> <span>1400 - اکنون</span></p>
+              <p><strong>معدل:</strong> <span>:)</span></p>
+            </div>
+            <div>
+              <h4>دیپلم ریاضی فیزیک</h4>
+              <p>
+                <strong>مدرسه:</strong>
+                <span>مدرسه نمونه دولتی حضرت زهرا</span>
+              </p>
+              <p><strong>شهر:</strong> <span>یزد</span></p>
+              <p><strong>سال‌ها:</strong> <span>۱۳۹۸ - ۱۴۰۰</span></p>
+              <p><strong>معدل:</strong> <span>۱۹٫۵۹</span></p>
+            </div>
+          </div>
+        </section>
+        <section class="job-experience">
+          <h1>سوابق شغلی</h1>
+          <div class="job-parts">
+            <div>
+              <h4><strong>برنامه‌نویس C# / ASP.NET</strong></h4>
+              <p><span>شرکت مهندسی کسرا</span></p>
+              <p><span>اصفهان</span></p>
+            </div>
+            <div>
+              <h4><strong>برنامه‌نویس C# / ASP.NET</strong></h4>
+              <p><span>استارتاپ Orbyx</span></p>
+              <p><span>اصفهان</span></p>
+            </div>
+          </div>
+          <div>
+            <p><strong>وظایف و دستاوردها:</strong></p>
+            <ul>
+              <li>
+                توسعه و پیاده‌سازی برنامه‌های وب با استفاده از C# و ASP.NET
+              </li>
+              <li>
+                کار کردن روی بانک‌های اطلاعاتی با استفاده از SQL Server و Entity
+                Framework
+              </li>
+              <li>
+                تجربه عملی در محیط‌های توسعه‌ی Collaborative از جمله Git و Agile
+              </li>
+              <li>
+                یادگیری مهارت‌های نرم از جمله Communication، Problem Solving،
+                Teamwork و Adaptability
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="language">
+            <h1>زبان</h1>
+            <p><strong>انگلیسی:</strong>پیشرفته</p>
+            <p><strong>مدرک:</strong>Longman Certificate</p>
+        </section>
+      </div>
+      <div class="left-side">
+        <section class="skills">
+          <h1>مهارت‌ها</h1>
+          <table>
+            <tr>
+              <th>دسته‌بندی</th>
+              <th>مهارت‌ها</th>
+            </tr>
+            <tr>
+              <td>برنامه‌نویسی</td>
+              <td>C#/ASP.NET, Java, Python</td>
+            </tr>
+            <tr>
+              <td>توسعه فرانت‌اند</td>
+              <td>HTML, CSS, JS</td>
+            </tr>
+            <tr>
+              <td>پایگاه داده</td>
+              <td>SQL Server, MySQL, PostgreSQL</td>
+            </tr>
+            <tr>
+              <td>سایر</td>
+              <td>OOP, REST API, MVC, LINQ, Git</td>
+            </tr>
+          </table>
+        </section>
+        <section class="projects">
+          <h1>برخی از پروژه ها</h1>
+          <div>
+            <h4>Dotnet Internship</h4>
+            <p>
+              <strong>توضیحات:</strong>پروژه کارآموزی در محیط ASP.NET برای توسعه
+              ماژول‌های وب با استفاده از C# و EF Core.
+            </p>
+            <p><strong>تکنولوژی‌ها:</strong> C#, ASP.NET, Entity Framework</p>
+            <a
+              href="https://github.com/mohadese1381/Dotnet-Internship"
+              target="_blank"
+              >مشاهده در GitHub</a
+            >
+          </div>
+          <div>
+            <h3>سیستم حضور و غیاب اندروید</h3>
+            <p>
+              <strong>توضیحات:</strong>اپلیکیشن حضور و غیاب طراحی‌شده با Kotlin
+              و Jetpack Compose، همراه با سرور Java.
+            </p>
+            <p>
+              <strong>تکنولوژی‌ها:</strong> Kotlin, Jetpack Compose, Java,
+              spring
+            </p>
+            <a
+              href="https://github.com/android-project-UI/android"
+              target="_blank"
+              >اپ اندروید</a
+            >
+            |
+            <a
+              href="https://github.com/android-project-UI/server"
+              target="_blank"
+              >سرور</a
+            >
+          </div>
+          <div>
+            <h3>Search Engine</h3>
+            <p>
+              <strong>توضیحات:</strong>طراحی موتور جستجوی ساده با الگوریتم
+              ایندکس‌گذاری و نمایش نتایج.
+            </p>
+            <p><strong>تکنولوژی‌ها:</strong> C#, Text Processing</p>
+            <a
+              href="https://github.com/mohadese1381/Search-engine"
+              target="_blank"
+              >مشاهده در GitHub</a
+            >
+          </div>
+          <div>
+            <h3>Accounting System</h3>
+            <p>
+              <strong>توضیحات:</strong>سیستم حسابداری ساده برای مدیریت تراکنش‌ها
+              و گزارش گیری مالی.
+            </p>
+            <p><strong>تکنولوژی‌ها:</strong> C#, xunit, SQL Server</p>
+            <a
+              href="https://github.com/mohadese1381/Accounting-System"
+              target="_blank"
+              >مشاهده در GitHub</a
+            >
+          </div>
+          <div>
+            <h3>Clinic Management System</h3>
+            <p>
+              <strong>توضیحات:</strong>پروژه‌ای برای مدیریت کلینیک شامل ثبت
+              بیماران و نوبت‌دهی.
+            </p>
+            <p><strong>تکنولوژی‌ها:</strong> C#, SQL Server</p>
+            <a
+              href="https://github.com/mohadese1381/Clinic-Management-System"
+              target="_blank"
+              >مشاهده در GitHub</a
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
