@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <title>صفحه اصلی</title>
     <style>
+      body {
+        background-color: #a9c4e0;
+        direction: rtl;
+        padding: 30px;
+        color: #2c3e50;
+      }
       /*make it simple and with no bullets*/
       nav ul {
         list-style: none;
@@ -28,51 +34,56 @@
         color: #4f6e90;
         font-weight: bold;
       }
+      .start-view {
+        display: flex;
+        margin-top: 80px;
+        padding: 0px;
+      }
+      .start-view #profile-pic img {
+        border-top-left-radius: 40%;
+        border-top-right-radius: 40%;
+      }
+      .start-view #start-text {
+        font-weight: bold;
+        font-size: 26px;
+        margin-top: 100px;
+       margin-right: 200px;
+      }
     </style>
   </head>
-  <body style="background-color: #a9c4e0; direction: rtl; padding: 30px">
+  <body>
     <header>
       <nav>
         <ul>
           <li>
-            <a
-              href="about.html"
-              target="_blank"
-              style="color: #2c3e50; text-decoration: none"
-              >درباره من</a
-            >
+            <a href="about.html" target="_blank">درباره من</a>
           </li>
           <li>
-            <a
-              href="resume.html"
-              target="_blank"
-              style="color: #2c3e50; text-decoration: none"
-              >رزومه من</a
-            >
+            <a href="resume.html" target="_blank">رزومه من</a>
           </li>
           <li>
-            <a
-              href="contact.html"
-              target="_blank"
-              style="color: #2c3e50; text-decoration: none"
-              >ارتباط با من</a
-            >
+            <a href="contact.html" target="_blank">ارتباط با من</a>
           </li>
         </ul>
       </nav>
     </header>
-    <h1 style="color: #2c3e50">سلام من محدثه هستم</h1>
-    <p style="color: #2c3e50">
-      به وبسایت شخصی من خوش اومدین.اینجا میتونید با من، مهارت هام و پروژه هام
-      آشنا بشید
-    </p>
-    <img
-      src="images/Profile.jpg"
-      alt="عکس پروفایل من"
-      title="!این منم"
-      width="300"
-      height="300"
-      style="border-top-left-radius: 40%; border-top-right-radius: 40%"
-    />
+    <main>
+      <section class="start-view">
+        <div id="profile-pic">
+          <img
+            src="images/Profile.jpg"
+            alt="عکس پروفایل من"
+            title="!این منم"
+            width="500"
+            height="650"
+          />
+        </div>
+        <div id="start-text">
+          <h1>سلام من محدثه هستم</h1>
+          <p>به وبسایت شخصی من خوش اومدین.</p>
+          <p>اینجا میتونید با من و مهارت هام آشنا بشید.</p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
