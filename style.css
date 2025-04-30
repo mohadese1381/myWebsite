@@ -1,10 +1,13 @@
 /* index.css */
 body {
-  background-color: #a9c4e0;
+  background-color: #ffffff;
+  /*  background: linear-gradient(135deg, #e8f0ff, #f5fff5); */
   direction: rtl;
   padding: 1.875rem;
-  color: #2c3e50;
-  font-family: 'Vazirmatn', sans-serif;
+  color: #0b0c0c;
+  font-family: "Vazirmatn", sans-serif;
+  height: 100%;
+  position: relative;
 }
 nav ul {
   list-style: none;
@@ -20,12 +23,12 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #2c3e50;
+  color: #0b0c0c;
   font-weight: bold;
 }
 nav ul li a:hover {
   text-decoration: none;
-  color: #4f6e90;
+  color: #0db760;
   font-weight: bold;
 }
 .start-view {
@@ -42,30 +45,129 @@ nav ul li a:hover {
   font-size: 1.625rem;
   margin-top: 6.25rem;
   margin-right: 12.5rem;
+  justify-content: center;
+  justify-items: center;
+}
+.start-view #start-text span {
+  color: #0db760;
+}
+
+.floating-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 10s linear infinite;
+}
+.miniCircle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 10s linear infinite;
+}
+.red {
+  background: red;
+  top: 15%;
+  left: 20%;
+}
+.green {
+  background: green;
+  top: 20%;
+  left: 40%;
+}
+.yellow {
+  background: yellow;
+  top: 15%;
+  left: 5%;
+}
+.blue {
+  background: blue;
+  top: 40%;
+  left: 5%;
+}
+.black {
+  background: black;
+  top: 10%;
+  left: 35%;
+}
+.red2 {
+  background: red;
+  top: 30%;
+  left: 35%;
+}
+.green2 {
+  background: green;
+  top: 14%;
+  left: 50%;
+}
+.yellow2 {
+  background: yellow;
+  top: 5%;
+  left: 10%;
+}
+.blue2 {
+  background: blue;
+  top: 25%;
+  left: 20%;
+}
+.black2 {
+  background: black;
+  top: 30%;
+  left: 10%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* about.css */
-main h1 {
-  display: flex;
-  justify-content: center;
+.aboutMain h1 {
+  text-align: center;
 }
+
 .greeting {
   display: flex;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
   justify-content: space-evenly;
 }
 .greeting div {
-  border: 2px solid #fbe092;
-  border-radius: 100px;
+  border: 2px solid #0db760;
+  border-radius: 50px;
   width: 20%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   overflow: auto;
+  transition: transform 0.3s ease;
+}
+.greeting div:hover {
+  transform: translateY(-10px) scale(1.02);
 }
 .greeting div h2 {
   justify-self: center;
 }
 .greeting div p {
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -92,36 +194,45 @@ main h1 {
 .job-parts div {
   margin-left: 70px;
 }
-main {
+.resumeMain {
   display: flex;
   justify-content: space-between;
   padding: 30px;
 }
-main .right-side {
+.resumeMain .right-side {
   width: 70%;
 }
-main .left-side {
+.resumeMain .left-side {
   width: 30%;
 }
-main table {
+.resumeMain table {
   width: 100%;
 }
-main table th {
+.resumeMain table th {
   text-align: right;
   vertical-align: middle;
 }
 .projects div a {
   text-decoration: none;
-  color: #2c3e50;
+  color: #0b0c0c;
 }
 .projects div a:hover {
   text-decoration: none;
-  color: #4f6e90;
+  color: #0db760;
+}
+.projects div{
+    margin-bottom: 1.25rem;
+    border: 2px solid #0db760;
+    border-radius: 10em;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
 }
 .right-side .face-id img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 .right-side .face-id {
   display: flex;
@@ -130,10 +241,13 @@ main table th {
   margin-right: 40px;
   align-content: center;
 }
+.summary div p span {
+  color: #0db760;
+}
 
 /* contact.css */
 .contact-us {
-  margin-top: 100px;
+  margin-top: 4.8rem;
 }
 .contact-info form {
   display: flex;
@@ -143,8 +257,7 @@ main table th {
 .contact-info form input,
 textarea {
   border-style: none;
-  background-color: #a9c4e0;
-  border-bottom: 2px solid #fbe092;
+  border-bottom: 2px solid #0db760;
   width: 250px;
   margin-bottom: 15px;
 }
@@ -162,29 +275,55 @@ textarea {
   width: 250px;
   height: 40px;
   border-radius: 20px;
-  background-color: #fbe092;
-  color: #2c3e50;
+  background-color: #0db760;
+  color: #0b0c0c;
   border-style: none;
 }
 .contact-info form button:hover {
-  background-color: #f4c63e;
+  background-color: #04ff7d;
 }
-.contact-details a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #2c3e50;
-}
-.contact-details a:hover {
-  text-decoration: none;
-  font-weight: bold;
-  color: #4f6e90;
-}
-.contact-details {
-  font-weight: bold;
-  direction: ltr;
-}
-body main h1 {
+.contact-cards {
   display: flex;
-  margin-top: 50px;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-box {
+  background-color: #4caf50;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.icon-box a {
+  text-decoration: none;
+}
+.icon-box i {
+  color: #ffffff;
+}
+
+.contact-info .label {
+  font-size: 0.85rem;
+  color: gray;
+  margin: 0;
+}
+
+.contact-info .value {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+.contactMain h1 {
+  text-align: center;
+  margin-top: 50px;
 }
